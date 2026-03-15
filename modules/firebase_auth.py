@@ -5,6 +5,10 @@ Handles user authentication and session management with Firebase
 
 import streamlit as st
 from modules.firebase_database import FirebaseManager
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from modules.firebase_secrets import firebase_config
 
 class FirebaseAuthManager:
     def __init__(self, firebase_manager):

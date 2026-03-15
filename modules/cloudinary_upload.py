@@ -5,7 +5,10 @@ Handles image uploads to Cloudinary
 
 import cloudinary
 import cloudinary.uploader
-from cloudinary_config import cloudinary_config
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from modules.cloudinary_secrets import cloudinary_config
 from PIL import Image
 import io
 

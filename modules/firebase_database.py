@@ -6,7 +6,10 @@ Handles all Firebase Firestore operations
 import pyrebase
 from datetime import datetime
 import streamlit as st
-from firebase_config import firebase_config
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from modules.firebase_secrets import firebase_config
 
 class FirebaseManager:
     def __init__(self):
